@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav> <!-- start navigation -->
+        <ul> <!-- navigation content -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul> <!-- end navigation content -->
+    </nav> <!-- end navigation -->
+    
+    
+    <div>
+        <main>
+            <section class="aboutSections"> <!-- section for header -->
+                <h1 class="h1Style">Portfolio</h1>
+            </section>
+            <section id="portfolioBody"> <!-- section for text -->
+                <div class="container">
+                    
+                    <div class="galleryContainer width-3 height-2">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/mommmmmmy.jpg" alt="Vector Art" onclick="openModal(); currentSlide(1)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Vector Art
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-3 height-3">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/PBCK331.jpg" alt="Vega Brochure" onclick="openModal(); currentSlide(2)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Brochure Design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-3 height-3">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/JAJAJ.jpg" alt="Logo Design" onclick="openModal(); currentSlide(3)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                JAJ Cycles Logo Design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-3 height-2">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/IRUKA TECH.jpg" alt="Logo Design" onclick="openModal(); currentSlide(4)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Iruka Tech Logo 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-4 height-2">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/554.jpg" alt="Logo Design" onclick="openModal(); currentSlide(5)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Rajasthan Arts Gallery Logo
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-4 height-2">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/Untitled-1.jpg" alt="Vector Art" onclick="openModal(); currentSlide(6)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Vector Art
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-2 height-3">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/POSTER-COVID.jpg" alt="COVID POSTER" onclick="openModal(); currentSlide(7)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Poster Covid-19
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-2 height-1">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/samarth.jpg" alt="Logo Design" onclick="openModal(); currentSlide(8)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Samarth Products Logo
+                            </div>
+                        </div>
+                    </div>
+                    <div class="galleryContainer width-3 height-3">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/hiringDG.jpg" alt="Job Advertisement" onclick="openModal(); currentSlide(2)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Advertisement Design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-3 height-3">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/digital.jpg" alt="Poster Design" onclick="openModal(); currentSlide(3)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Evogen Poster Design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-3 height-2">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/TROPHY.jpg" alt="Trophy Design" onclick="openModal(); currentSlide(4)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Trophy Design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="galleryContainer width-3 height-2">
+                        <div class="galleryItem">
+                            <div class="image">
+                                <img src="assets/2.jpg" alt="Pamphlet Design" onclick="openModal(); currentSlide(5)" class="hoverShadow">
+                            </div>
+                            <div class="text">
+                                Vega Pamphlet Design
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <!-- the modal -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modalContent">
+
+                        <div class="mySlides">
+                            <img src="assets/mommmmmmy.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/PBCK331.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/JAJAJ.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/IRUKA TECH.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/554.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/POSTER-COVID.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/Untitled-1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/digital.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/TROPHY.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/hiringDG.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="assets/samarth.jpg" style="width:100%">
+                        </div>
+
+                        <!-- next/previous control-->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                </div>
+            </section>        
+    <footer class="footer">
+        <p>Koni Graphics Web Development || 2021 | <a href="references.html">References</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

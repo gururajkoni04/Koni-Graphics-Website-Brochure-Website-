@@ -1,0 +1,875 @@
+
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+}
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+h2,.white{
+    color: black;
+}
+
+a{
+    color: #7A7C80;
+    text-decoration: none;
+}
+/* section 1 */
+.section-1{
+    padding-top: 20vh;
+    text-align: center;
+}
+
+.section-1 p{
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin:0;
+}
+
+.section-1 h2{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-1 a{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+/* section 2 */
+.section-2{
+    padding-top: 2vh;
+    width: 100%;
+}
+
+.section-2 h2{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-2 p{
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin:0;
+}
+
+.section-2 a{
+    padding: 5px;
+    color: black;
+    padding-left: 0;
+    width: 100px;
+}
+/* animations / utilities */
+.section-2 a:hover{
+    font-size: 1.3rem;
+    color: green;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-1 a:hover{
+    color: green;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.white:hover{
+    position: relative;
+    padding-left: 10px;
+}
+
+/* media queres */
+@media(max-width:780px){
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .section-1{
+        padding:0;
+        padding-top: 5rem;
+    }
+    .section-2{
+        padding: 0;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+}
+
+
+#indexBody {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+#indexBody::before {
+    content: "";
+    background: url(assets/KONI.jpg);
+    opacity: 0.5;
+    z-index: -1;  
+    opacity: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 0;
+    min-height: 100%;
+    min-width: 1440px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#indexWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section {
+    overflow: auto;
+    padding: 10px 0 10px 0;
+}
+
+.indexSections {
+    text-align: center;
+    color: black;
+}
+
+/** header styles **/
+.h1Style {
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    color:white;
+    text-shadow: 2px 2px 1px #a01160;
+}
+
+#indexHeader {
+    font-size: 50px;
+}
+
+/** index icons **/
+
+.indexIcons {
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+
+.indexIcons:hover {
+    opacity: 50%;
+}
+
+/** index buttons **/
+
+.indexButtons {
+    display: block;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+#portfolioButton, #instagramButton {
+    margin: 5px;
+    text-align: center;
+    border: black;
+    border-style: solid;
+    border-width: 3px;
+}
+
+#portfolioButton:hover, #instagramButton:hover {
+    background-color: #a01160;
+}
+
+.indexButtons:hover {
+    color: white;
+}
+
+/** footer styles **/
+
+#indexFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;    
+}
+
+/** Navigation styles */
+
+nav {
+    padding: 0 0 5px 0;
+}
+
+nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav > ul > li {
+    display: inline;
+    width: 100%;
+    height: 20%;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+nav > ul > li a {
+    display: inline-block;
+    padding: 10px;
+    color: #d0d0d0;
+    text-decoration: none;
+}
+
+nav > ul > li a:hover {
+    color: 	#a01160;
+}
+
+/** portfolio styles **/
+#portfolioBody{
+    margin:20px;
+    padding:0;
+    text-align:center;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows:100px 300px;
+    grid-gap:10px;
+    grid-auto-flow: dense;
+}
+
+.galleryItem{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.galleryItem .image{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.galleryItem .image img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:50% 50%;
+    cursor:pointer;
+    transition:.5s ease-in-out;
+}
+.galleryItem:hover .image img{
+    transform:scale(1.5);
+}
+
+.galleryItem .text{
+    opacity:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-shadow: 2px 2px 1px black;
+    font-size:25px;
+    pointer-events:none;
+    z-index:4;
+    transition: .3s ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.galleryItem:hover .text{
+    opacity:1;
+    animation: move-down .3s linear;
+    padding:1em;
+    width:85%;
+}
+
+.width-1 {
+    grid-column: span 1;
+}
+
+.width-2 {
+    grid-column: span 2;
+}
+
+.width-3 {
+    grid-column: span 3;
+}
+
+.width-4 {
+    grid-column: span 4;
+}
+
+.width-5 {
+    grid-column: span 5;
+}
+
+.width-6 {
+    grid-column: span 6;
+}
+
+.height-1 {
+    grid-row: span 1;
+}
+
+.height-2 {
+    grid-row: span 2;
+}
+
+.height-3 {
+    grid-row: span 3;
+}
+
+.height-4 {
+    grid-row: span 4;
+}
+
+.height-5 {
+    grid-row: span 5;
+}
+
+.height-6 {
+    grid-row: span 6;
+}
+
+@keyframes move-down{
+
+    0%{
+        top:10%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:50%;
+    }
+}
+
+
+/** portfolio image gallery modal styles **/
+/* The Modal (background) */
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 1;   /*order of elements, higher the z-index, more upfront it will be*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modalContent {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hoverShadow {
+    transition: 0.3s;
+  }
+  
+  .hoverShadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+/** contact styles **/
+.fieldStyle {
+    padding: 5px 0;
+}  
+
+/** media queries **/
+/**
+@media screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .width-1, .width-2, .width-3, .width-4, .width-5, .width-6 {
+        grid-column: span 1;
+    }
+}
+**/
+
+/** Tablets **/
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    
+    #indexBody::before {
+        min-width: 2160px;
+    }
+    
+    main > section {
+        padding: 15px 0 15px 0;
+    }
+    
+    /** header styles **/
+    .h1Style {
+        font-size: 75px;
+        font-style: italic;
+        color: #666666;
+        text-align: center;
+    }
+    
+    #indexHeader {
+        font-size: 75px;
+    }
+    
+    /** index icons **/
+    
+    .indexIcons {
+        height: 37.5px;
+        width: 37.5px;
+        margin: 7.5px;
+    }
+    
+    /** index buttons **/
+    
+    .indexButtons {
+        padding: 21px 42px;
+        font-size: 30px;
+    }
+    
+    #portfolioButton, #instagramButton {
+        margin: 7.5px;
+        border-width: 4.5px;
+    }
+    
+    /** Navigation styles */
+    
+    nav {
+        padding: 0 0 7.5px 0;
+    }
+    
+    nav > ul > li {
+        font-size: 1.875em;
+    }
+    
+    nav > ul > li a {
+        padding: 15px;
+    }
+    
+    /** portfolio styles **/
+    #portfolioBody{
+        margin:30px;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows:100px 300px;
+        grid-gap:10px;
+        grid-auto-flow: dense;
+    }
+
+    
+    .galleryItem .text{
+        opacity:0;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        color:#92076a;
+        font-size:37.5px;
+        pointer-events:none;
+        z-index:4;
+        transition: .3s ease-in-out;
+        -webkit-backdrop-filter: blur(7.5px) saturate(1.8);
+        backdrop-filter: blur(7.5px) saturate(1.8);
+    }
+    
+    .galleryItem:hover .text{
+        opacity:0;
+        animation: move-down .3s linear;
+        padding:1.5em;
+        width:85%;
+    }
+    
+    .width-1, .width-2, .width-3, .width-4, .width-5, .width-6 {
+        grid-column: span 2;
+    }
+    
+    .height-1, .height-2, .height-3, .height-4, .height-5, .height-6 {
+        grid-row: span 4;
+    }
+    
+    @keyframes move-down{
+    
+        0%{
+            top:10%;
+        }
+        50%{
+            top:35%;
+        }
+        100%{
+            top:50%;
+        }
+    }
+    
+    /** gear page styles **/
+    .gearImages {
+        height: 400px;
+        width: 400px;
+    }  
+    
+    #camera, #tripod, #cameraFilm {
+        padding: 15px 0 15px 0;
+    }
+    
+    .imageRight {
+        margin: 5px;
+    }
+    
+    #imageLeft {
+        margin: 5px;
+    }
+    
+    /** portfolio image gallery modal styles **/
+    /* The Modal (background) */
+    
+    .modalContent {
+        margin: 40% auto;
+        width: 70%;
+        box-shadow: 0 7.5px 12px 0 rgba(0,0,0,0.2), 0 10.5px 30px 0 rgba(0,0,0,0.17);
+    }
+      
+      /* The Close Button */
+      .close {
+        top: 15px;
+        right: 37.5px;
+        font-size: 52.5px;
+      }
+            
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        padding: 24px;
+        margin-top: -55px;
+        font-size: 30px;
+        border-radius: 0 4.5px 4.5px 0;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        border-radius: 4.5px 0 0 4.5px;
+      }
+    
+      .prev {
+          border-radius: 4.5px 0 0 4.5px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      
+      .hoverShadow:hover {
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 9px 30px 0 rgba(0, 0, 0, 0.19);
+      }
+    
+    /** contact styles **/
+    .fieldStyle {
+        padding: 7.5px 0;
+    }
+
+    .textAreaRows {
+        height: 50%;
+    }
+
+    .textAreaCols {
+        width: 42%;
+    }
+}
+
+/** Mobile phones **/
+@media only screen and (max-width: 600px) {
+    
+    #indexBody::before {
+        min-width: 1220px;
+    }
+        
+    main > section {
+        overflow: auto;
+        padding: 5px 0 5px 0;
+    }
+    
+    /** header styles **/
+    .h1Style {
+        font-size: 37.5px;
+        text-align: center;
+    }
+    
+    #indexHeader {
+        font-size: 37.5px;
+    }
+    
+    /** index icons **/
+    
+    .indexIcons {
+        height: 18.75px;
+        width: 18.75px;
+        margin: 6.25px;
+    }
+    
+    /** index buttons **/
+    
+    .indexButtons {
+        padding: 17.5px 35px;
+        font-size: 25px;
+    }
+    
+    #portfolioButton, #instagramButton {
+        margin: 6.25px;
+        border-width: 3.75px;
+    }
+        
+    /** Navigation styles */
+    
+    nav {
+        padding: 0 0 6.25px 0;
+    }
+    
+    nav > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    nav > ul > li {
+        display: inline;
+        width: 100%;
+        height: 20%;
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+    
+    nav > ul > li a {
+        display: inline-block;
+        padding: 10px;
+        color: #92076a;
+        text-decoration: none;
+    }
+    
+    nav > ul > li a:hover {
+        color: 	#92076a;
+    }
+    
+    /** portfolio styles **/
+    #portfolioBody {
+        margin: 25px;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 100px 300px;
+        grid-gap: 10px;
+        grid-auto-flow: dense;
+    }
+    
+    .galleryItem {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .galleryItem .image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .galleryItem .text {
+        font-size: 37.5px;
+        -webkit-backdrop-filter: blur(7.55px) saturate(1.8);
+        backdrop-filter: blur(7.5px) saturate(1.8);
+    }
+    
+    .galleryItem:hover .text {
+        padding: 1.5em;
+        opacity: 0;
+    }
+    
+    .width-1, .width-2, .width-3, .width-4, .width-5, .width-6 {
+        grid-column: span 1;
+    }
+
+    .height-1, .height-2, .height-3, .height-4, .height-5, .height-6 {
+        grid-row: span 2;
+    }
+    
+    /** gear page styles **/
+    .gearImages {
+        height: 150px;
+        width: 150px;
+    }  
+    
+    #camera, #tripod, #cameraFilm {
+        border-bottom: solid #d0d0d0;
+        overflow: auto;
+        padding: 5px 0 5px 0;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+    
+    .imageRight {
+        float: right;
+        margin: 5px;
+    }
+    
+    #imageLeft {
+        float: left;
+        margin: 5px;
+    }
+    
+    /** portfolio image gallery modal styles **/
+    /* The Modal (background) */
+    
+    .modalContent {
+        background-color: #92076a;
+        margin: 60% auto;
+        width: 70%;
+        box-shadow: 0 2.5px 4px 0 rgba(0,0,0,0.2), 0 3.5px 10px 0 rgba(0,0,0,0.17);
+        animation-name: modalopen;
+        animation-duration: 1s;
+    }
+      
+      /* The Close Button */
+      .close {
+        top: 5px;
+        right: 12.5px;
+        font-size: 17.5px;
+      }
+      
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        top: 50%;
+        padding: 8px;
+        margin-top: -25px;
+        font-size: 10px;
+        transition: 0.6s ease;
+        border-radius: 0 1.5px 1.5px 0;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        border-radius: 1.5px 0 0 1.5px;
+      }
+    
+      .prev {
+          border-radius: 1.5px 0 0 1.5px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */      
+      .hoverShadow:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+      }
+    
+    /** contact styles **/
+    .fieldStyle {
+        padding: 1.25px 0;
+    }  
+
+    .textAreaRows {
+        height: 25%;
+    }
+
+    .textAreaCols {
+        width:175px;
+    }
+}    
